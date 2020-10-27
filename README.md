@@ -36,7 +36,7 @@ Os testes implementados foram:
          
    teste_normalize_erro: 
       Induz ao erro com o my_min mior que my_max, 
-      teoricamente isso não poe acontecer.
+      teoricamente isso não pode acontecer.
       valores de entrada:
          main.my_min = 20
          main.my_max = 10
