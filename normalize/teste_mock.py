@@ -13,12 +13,12 @@ class teste_mock(unittest.TestCase):
     def teste_normalize_menor_igual_menor(self):
         main.my_min = MagicMock(return_value=3)
         main.my_max = MagicMock(return_value=3)
-        self.assertEqual([100],main.normalize([8]))
+        self.assertEqual([100],main.normalize([3]))
     
     def teste_normalize(self):
         main.my_min = MagicMock(return_value=3)
         main.my_max = MagicMock(return_value=4)
-        self.assertEqual([500],main.normalize([8]))
+        self.assertEqual([0.0, 100.0],main.normalize([3,4]))
     
     def teste_normalize_maior_que_100(self):
         main.my_min = MagicMock(return_value=100)
