@@ -30,6 +30,11 @@ class teste_mock(unittest.TestCase):
         main.my_max = MagicMock(return_value=10)
         self.assertEqual([0.0, 6.25, 100.0],main.normalize([0.4,1,10]))
     
+    def teste_normalize_erro(self):
+        main.my_min = MagicMock(return_value=20)
+        main.my_max = MagicMock(return_value=10)
+        self.assertEqual([196.00000000000003, 190.0, 100.0],main.normalize([0.4,1,10]))
+    
     
 if __name__ == '__main__':
     unittest.main()
